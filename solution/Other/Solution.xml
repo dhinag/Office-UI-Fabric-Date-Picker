@@ -2,32 +2,32 @@
 <ImportExportXml version="9.1.0.643" SolutionPackageVersion="9.1" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <!-- Unique Name of Cds Solution-->
-    <UniqueName>FabricDatePicker</UniqueName>
+    <UniqueName>solution</UniqueName>
     <LocalizedNames>
       <!-- Localized Solution Name in language code -->
-      <LocalizedName description="FabricDatePicker" languagecode="1033" />
+      <LocalizedName description="solution" languagecode="1033" />
     </LocalizedNames>
     <Descriptions />
-    <Version>1.1.1</Version>
+    <Version>1.0</Version>
     <!-- Solution Package Type: Unmanaged(0)/Managed(1)/Both(2)-->
     <Managed>2</Managed>
     <Publisher>
       <!-- Unique Publisher Name of Cds Solution -->
-      <UniqueName>rajyraman</UniqueName>
+      <UniqueName>DhinaGaja</UniqueName>
       <LocalizedNames>
         <!-- Localized Cds Publisher Name in language code-->
-        <LocalizedName description="Natraj Yegnaraman" languagecode="1033" />
+        <LocalizedName description="DhinaGaja" languagecode="1033" />
       </LocalizedNames>
       <Descriptions>
         <!-- Description of Cds Publisher in language code -->
-        <Description description="Natraj Yegnaraman" languagecode="1033" />
+        <Description description="DhinaGaja" languagecode="1033" />
       </Descriptions>
       <EMailAddress xsi:nil="true"></EMailAddress>
       <SupportingWebsiteUrl xsi:nil="true"></SupportingWebsiteUrl>
       <!-- Customization Prefix for the Cds Publisher-->
-      <CustomizationPrefix>ryr</CustomizationPrefix>
+      <CustomizationPrefix>dg</CustomizationPrefix>
       <!-- Derived Option Value Prefix for the Customization Prefix of Cds Publisher -->
-      <CustomizationOptionValuePrefix>71103</CustomizationOptionValuePrefix>
+      <CustomizationOptionValuePrefix>55419</CustomizationOptionValuePrefix>
       <Addresses>
         <!-- Address of the Publisher-->
         <Address>

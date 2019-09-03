@@ -1,4 +1,6 @@
 import * as React from "react";
+import * as Sugar from "sugar";
+
 import {
   DatePicker,
   IDatePickerStrings
@@ -61,13 +63,14 @@ const DayPickerStrings: IDatePickerStrings = {
 export interface IDatePickerProps {
   inputDateChanged?: (newValue: Date) => void;
   inputDate?: Date;
+  placeholder?: string;
 }
 
 export interface IDatePickerState
   extends React.ComponentState,
     IDatePickerProps {}
 
-export class FabricDatePicker extends React.Component<
+export class NLPDatePicker extends React.Component<
   IDatePickerProps,
   IDatePickerState
 > {
@@ -75,7 +78,8 @@ export class FabricDatePicker extends React.Component<
     super(props);
 
     this.state = {
-      inputDate: props.inputDate
+      inputDate: props.inputDate,
+      placeholder: props.placeholder
     };
   }
 
@@ -85,16 +89,18 @@ export class FabricDatePicker extends React.Component<
         <DatePicker
           strings={DayPickerStrings}
           firstWeekOfYear={1}
-          placeholder="Select a date..."
-          ariaLabel="Select a date"
+          placeholder={this.state.placeholder}
+          ariaLabel={this.state.placeholder}
+          allowTextInput={true}
           value={this.state.inputDate}
           formatDate={date =>
             `${date.toLocaleDateString(
               navigator.languages && navigator.languages[0]
             )}`
           }
-          showWeekNumbers={true}
+          showWeekNumbers={false}
           onSelectDate={this.onSelectDate}
+          parseDateFromString={this._onParseDateFromString}
         />
       </div>
     );
@@ -106,5 +112,11 @@ export class FabricDatePicker extends React.Component<
     if (this.props.inputDateChanged) {
       this.props.inputDateChanged(value);
     }
+  };
+
+  private _onParseDateFromString = (value: string): Date => {
+
+     let dateValue = Sugar.Date.create(value);
+    return new Date(dateValue);
   };
 }

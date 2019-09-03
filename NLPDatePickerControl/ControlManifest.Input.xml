@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="DG.PC" constructor="NLPDatePickerControl" version="1.0" display-name-key="NLP Date Picker Control" description-key="This control allows the users to enter the data in natural language." control-type="standard">
+    <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
+    <property name="inputDate" display-name-key="Date" description-key="Date field has to support the date entry in the natural language" of-type="DateAndTime.DateOnly" usage="bound" required="true" />
+    <resources>
+      <code path="index.ts" order="1"/>
+      <resx path="strings/NLPDatePickerControl.1033.resx" version="1.0.0" />
+    </resources>
+  </control>
+</manifest>

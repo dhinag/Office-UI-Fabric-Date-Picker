@@ -1,9 +1,9 @@
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { IDatePickerProps, FabricDatePicker } from "./FabricDatePicker";
+import { IDatePickerProps, NLPDatePicker } from "./NLPDatePicker";
 
-export class OfficeFabricDatePicker
+export class NLPDatePickerControl
   implements ComponentFramework.StandardControl<IInputs, IOutputs> {
   private notifyOutputChanged: () => void;
   private _container: HTMLDivElement;
@@ -32,6 +32,7 @@ export class OfficeFabricDatePicker
     container: HTMLDivElement
   ) {
     this._container = container;
+    this.props.placeholder = context.resources.getString("NLPDatePickerControl_Date_Placeholder");	
     this.props.inputDate = context.parameters.inputDate.raw || new Date();
     this.notifyOutputChanged = notifyOutputChanged;
   }
@@ -42,11 +43,11 @@ export class OfficeFabricDatePicker
    */
   public updateView(context: ComponentFramework.Context<IInputs>): void {
     if (this.props.inputDate != context.parameters.inputDate.raw) {
-      this.props.inputDate = context.parameters.inputDate.raw;
+      this.props.inputDate = context.parameters.inputDate.raw;     
     }
 
     ReactDOM.render(
-      React.createElement(FabricDatePicker, this.props),
+      React.createElement(NLPDatePicker, this.props),
       this._container
     );
   }
@@ -67,5 +68,5 @@ export class OfficeFabricDatePicker
    */
   public destroy(): void {
     ReactDOM.unmountComponentAtNode(this._container);
-  }
+  };
 }

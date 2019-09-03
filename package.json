@@ -13,7 +13,8 @@
     "@types/powerapps-component-framework": "1.1.0",
     "office-ui-fabric-react": "^7.19.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "sugar": "^2.0.6"
   },
   "devDependencies": {
     "pcf-scripts": "^0",
