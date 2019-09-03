@@ -118,11 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="NLPDatePickerControl_Date_Placeholder" xml:space="preserve">
-    <value>Type the date...</value>
-    <comment>Label for QnAMaker Control button</comment>
-  </data>
-   <data name="QnAMakerControl_QuestionText_Placeholder" xml:space="preserve">
-    <value>Type a question...</value>
-    <comment>Placeholder for the Question Text input</comment>
-  </data>
+    <value>Eg: Yesterday, in 5 days etc.,</value>
+    <comment>Placeholder for the date field</comment>
+  </data>  
 </root>
